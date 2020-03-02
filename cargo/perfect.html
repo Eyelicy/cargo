@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>login</title>
+    <style>
+        .v-application--is-ltr .v-text-field__prefix {
+            display: inline-block;
+            width: 143px;
+            /* padding-right: 4px; */
+            text-align: justify;
+            text-align-last: justify;
+            font-size: 22px;
+        }
+
+        .theme--light.v-input {
+            color: #0F7AFF;
+        }
+
+        .theme--light.v-text-field>.v-input__control>.v-input__slot:before {
+            border-color: #2787FF;
+        }
+
+        .theme--light.v-text-field:not(.v-input--has-state):hover>.v-input__control>.v-input__slot:before {
+            border-color: #2787FF;
+        }
+
+        .v-dialog {
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <v-app>
+            <v-content>
+                <v-card tile img="./images/register_bg@2x.png" height="100%">
+                    <v-row style="height: 100%;" justify="center" align="center">
+                        <v-col cols="12">
+                            <v-card class="mx-auto" max-width="600" max-height="900" min-height="850" tile>
+                                <v-sheet max-width="480" class="mx-auto">
+                                    <v-card-title class="pa-0 title font-weight-regular justify-space-between">
+                                        <v-progress-linear :class="[step>6 ? 'd-none':'']"
+                                            :style="{'margin-top': (step<3 ? '115px':'63px')}" height="10"
+                                            :value="step*50">
+                                        </v-progress-linear>
+                                        <span style="font-size: 40px;color: #107AFF;margin-top: 80px;"
+                                            class="font-weight-medium">{{ currentTitle }}</span>
+                                        <!-- <v-avatar color="primary lighten-2" class="subheading white--text" size="24" v-text="step">
+                                        </v-avatar> -->
+                                    </v-card-title>
+
+                                    <v-window v-model="step">
+                                        <v-window-item :value="1">
+                                            <v-card-text class="pa-0" style="margin-top: 74px;">
+                                                <v-text-field color="#0F7AFF" prefix="手机号码"></v-text-field>
+                                                <v-text-field color="#0F7AFF" prefix="验证码">
+                                                    <template v-slot:append>
+                                                        <v-btn width="150" rounded color="primary" class="mb-3">获取验证码
+                                                        </v-btn>
+                                                    </template>
+                                                </v-text-field>
+                                            </v-card-text>
+                                        </v-window-item>
+
+                                        <v-window-item :value="2">
+                                            <v-card-text class="pa-0" style="margin-top: 74px;">
+                                                <v-text-field color="#0F7AFF" prefix="姓名">
+                                                </v-text-field>
+                                                <v-text-field color="#0F7AFF" prefix="登录名">
+                                                </v-text-field>
+                                                <v-text-field color="#0F7AFF" prefix="密码">
+                                                </v-text-field>
+                                                <v-text-field color="#0F7AFF" prefix="确认密码">
+                                                </v-text-field>
+                                            </v-card-text>
+                                        </v-window-item>
+
+                                        <v-window-item :value="3">
+                                            <v-card-text class="pa-0" style="margin-top: 74px;">
+                                                <p style="font-size:40px;color:#2787FF;font-weight:400;margin-bottom: 60px;"
+                                                    class="text-center">恭喜您，注册成功&nbsp;&nbsp;！</p>
+                                                <v-img width="374" class="mx-auto"
+                                                    src="./images/login_was_successful_image@2x.png"></v-img>
+                                                <p style="font-size:30px;color:#2787FF;font-weight:400;margin-top: 60px;"
+                                                    class="text-center"><strong
+                                                        style="font-size:40px;font-weight:400;">还差一步&nbsp;&nbsp;</strong>就可使用平台功能
+                                                </p>
+                                            </v-card-text>
+                                        </v-window-item>
+
+
+                                        <v-window-item :value="4">
+                                            <v-card-text class="pa-0" style="margin-top: 74px;">
+                                                <v-text-field color="#0F7AFF" prefix="公司名称">
+                                                </v-text-field>
+                                                <v-text-field color="#0F7AFF" prefix="公司类型">
+                                                </v-text-field>
+                                                <v-text-field color="#0F7AFF" prefix="联系人">
+                                                </v-text-field>
+                                                <v-text-field color="#0F7AFF" prefix="联系人电话">
+                                                </v-text-field>
+                                            </v-card-text>
+                                        </v-window-item>
+
+                                        <v-window-item :value="5">
+                                            <v-card-text class="pa-0" style="margin-top: 74px;">
+
+                                                <p style="font-size:40px;color:#2787FF;font-weight:400;margin-bottom: 60px;"
+                                                    class="text-center">恭喜您</p>
+                                                <p style="font-size:40px;color:#2787FF;font-weight:400;margin-bottom: 50px;"
+                                                    class="text-center">可以开始使用啦</p>
+                                                <v-img width="476" class="mx-auto"
+                                                    src="./images/login_was_successful_image2@2x.png"></v-img>
+                                            </v-card-text>
+                                        </v-window-item>
+
+                                        <v-window-item :value="6">
+                                            <v-card-text class="pa-0" style="margin-top: 74px;">
+                                                <v-text-field color="#0F7AFF" prefix="社会信用代码">
+                                                </v-text-field>
+                                                <div class="d-flex justify-space-between">
+                                                    <p style="font-size: 22px;color:#107AFF;margin-top: 8px;">上传营业执照</p>
+                                                    <div style="width: 71%;height: 140px;"
+                                                        class="d-flex flex-column justify-space-between">
+                                                        <v-btn width="110" tile depressed color="#2787FF"
+                                                            class="white--text">点击上传</v-btn>
+                                                        <div class="d-flex">
+                                                            <v-sheet tile color="#B5B5B5" width="80" height="80"
+                                                                style="margin-right: 25px;"></v-sheet>
+                                                            <v-sheet tile color="#B5B5B5" width="80" height="80">
+                                                            </v-sheet>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-space-between mt-10">
+                                                    <p style="font-size: 22px;color:#107AFF;margin-top: 8px;">上传舱容表</p>
+                                                    <div style="width: 71%;height: 100px;"
+                                                        class="d-flex flex-column justify-space-between">
+                                                        <v-btn width="110" tile depressed color="#2787FF"
+                                                            class="white--text">点击上传</v-btn>
+                                                        <div class="d-flex">
+                                                            <p style="color: #2787FF;font-size: 16px;">*
+                                                                请上传该公司旗下任意一条船的电子版舱容表</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </v-card-text>
+                                        </v-window-item>
+
+                                        <v-window-item :value="7">
+                                            <v-card-text class="pa-0" style="margin-top: 74px;">
+                                                <p style="font-size:40px;color:#2787FF;font-weight:400;margin-bottom: 60px;"
+                                                    class="text-center">审核将在一个工作日内完</p>
+                                                <p style="font-size:40px;color:#2787FF;font-weight:400;margin-bottom: 60px;"
+                                                    class="text-center">成请耐心等待！</p>
+                                                <v-img width="374" class="mx-auto"
+                                                    src="./images/awaiting_audit_image@2x.png"></v-img>
+                                            </v-card-text>
+                                        </v-window-item>
+
+                                        <v-window-item :value="8">
+                                            <v-card-text class="pa-0" style="margin-top: 74px;">
+                                                <p style="font-size:40px;color:#2787FF;font-weight:400;margin-bottom: 60px;"
+                                                    class="text-center">公司认领成功</p>
+                                                <p style="font-size:30px;color:#2787FF;font-weight:400;margin-bottom: 60px;"
+                                                    class="text-center">您已成为某某某某公司管理员</p>
+                                                <v-img width="374" class="mx-auto"
+                                                    src="./images/company_claim_successful_image@2x.png"></v-img>
+                                            </v-card-text>
+                                        </v-window-item>
+
+                                        <v-window-item :value="9">
+                                            <v-card-text class="pa-0" style="margin-top: 74px;">
+                                                <p style="font-size:40px;color:#2787FF;font-weight:400;margin-bottom: 60px;"
+                                                    class="text-center">公司认领失败</p>
+                                                <p style="font-size:30px;color:#2787FF;font-weight:400;margin-bottom: 60px;"
+                                                    class="text-center">请输入审核失败原因</p>
+                                                <v-img width="374" class="mx-auto"
+                                                    src="./images/company_claim_failed_image@2x.png"></v-img>
+                                            </v-card-text>
+                                        </v-window-item>
+                                    </v-window>
+
+                                    <v-card-actions>
+                                        <v-btn width="100%" height="50" class="mx-auto headline"
+                                            style="margin-top: 100px;color: #fff;" rounded color="#2787FF" depressed
+                                            @click="next" style="font-size: 24px;">
+                                            {{btnText}}
+                                        </v-btn>
+                                    </v-card-actions>
+                                </v-sheet>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-card>
+                <v-dialog tile flat v-model="dialog" width="700">
+                    <v-card tile flat img="./images/blue_square@2x.png" class="mx-auto d-flex flex-column justify-space-between" max-width="600"
+                        min-height="500">
+                        <v-card-text style="color: #1C3249;font-size:20px;padding-top: 40px;">
+                            系统中已存在“******公司”信息，您可以选择“公司认领” 成为该公司管理员，或选择“重新填写”添加一个新的公司
+                        </v-card-text>
+
+                        <v-card-actions style="margin-bottom: 35px;">
+                            <v-btn class="ml-4" color="#2787FF" width="240" height="50" @click="step++,dialog = false"
+                                style="color: #fff;font-size:22px;">
+                                公司认领
+                            </v-btn>
+                            <v-spacer></v-spacer>
+                            <v-btn class="mr-4" color="#D6D6D6" width="240" height="50" @click="dialog = false"
+                                style="color: #1E2F46;font-size:22px;">
+                                重新填写
+                            </v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-dialog>
+            </v-content>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: () => ({
+                dialog: false,
+                step: 5,
+                bannerHeigth: 0,
+            }),
+            methods: {
+                next() {
+                    if (this.step === 5) {
+                        console.log(5);
+                        this.dialog = true;
+                    } else {
+                        this.step++
+                    }
+                }
+            },
+            computed: {
+                currentTitle() {
+                    switch (this.step) {
+                        case 1: return '注册'
+                        case 2: return '填写个人信息'
+                        case 4: return '完善公司信息'
+                        case 6: return '公司认领'
+                    }
+                },
+                btnText() {
+                    switch (this.step) {
+                        case 1: return '下一步';
+                        case 2:
+                        case 4:
+                        case 6: return '提交';
+                        case 3: return '立即完善';
+                        case 5: return '立即体验';
+                        case 7: return '退出登录';
+                        case 8: return '立即体验';
+                        case 9: return '更改完善公司信息';
+                    }
+                },
+            },
+        })
+    </script>
+</body>
+
+</html>
