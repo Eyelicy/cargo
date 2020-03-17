@@ -1,0 +1,33 @@
+<!--pages/evenCapacity/index.wxml-->
+<form catchtap="hideKeyboard" bindsubmit="formSubmit" style="{{isShow?'padding-bottom:500rpx;':''}}">
+  <view wx:for="{{list}}"  id="test{{index}}">
+    <view class='content'>
+      <view class='title'>
+        <text>{{item.cabinname}}</text>
+        <text style="{{item.setRed?'color:red;':''}}">修正后空距 <text>{{item.correntkong}}</text></text>
+      </view>
+      <view class='rightColumn1'>
+        <view class='column' data-index="ullage1" data-id="{{index}}" catchtap="focus">
+          <text>空高1</text>
+          <input style="{{i==index?type == 'ullage1'?'background:#b0d5fe':'':''}}" disabled="true" value="{{item.ullage1}}" focus="{{value1}}" name="data[{{index}}][ullage1]" type="digit" placeholder='请输入空高1' placeholder-class="inputPl"></input>
+        </view>
+        <view class='column' data-index="capacity1" data-id="{{index}}" catchtap="focus">
+          <text>容量1</text>
+          <input style="{{i==index?type == 'capacity1'?'background:#b0d5fe':'':''}}" disabled="true" value="{{item.capacity1}}" focus="{{value2}}" name="data[{{index}}][capacity1]" type="digit" placeholder='请输入容量1' placeholder-class="inputPl"></input>
+        </view>
+        <view class='column' data-index="ullage2" data-id="{{index}}" catchtap="focus">
+          <text>空高2</text>
+          <input style="{{i==index?type == 'ullage2'?'background:#b0d5fe':'':''}}" value="{{item.ullage2}}" disabled="true" focus="{{value3}}" name="data[{{index}}][ullage2]" type="digit" placeholder='请输入空高2' placeholder-class="inputPl"></input>
+        </view>
+        <view class='column' data-index="capacity2" data-id="{{index}}" catchtap="focus">
+          <text>容量2</text>
+          <input style="{{i==index?type == 'capacity2'?'background:#b0d5fe':'':''}}" value="{{item.capacity2}}" disabled="true" focus="{{value4}}" name="data[{{index}}][capacity2]" type="digit" placeholder='请输入容量2' placeholder-class="inputPl"></input>
+        </view>
+      </view>
+      <text class="textKg" catchtap="fzKg" data-id="{{index}}">复制空高</text>
+    </view>
+  </view>
+  <button class='sub' form-type="submit">提交</button>
+</form>
+
+<v-panel is-show="{{isShow}}" copy="{{copy}}" data-index="{{type}}" bindok="inputOk" binddelete="inputdelete" bindinputchange="inputChange" key-board-type="{{keyBoardType}}" backgroundColor="white" />

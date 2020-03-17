@@ -1,0 +1,149 @@
+<!--pages/registered/index.wxml-->
+<view class="main">
+  <view wx:if="{{step == 1}}" style="width:80%;margin:0 auto;">
+    <progress class="progress" activeColor="#2787FF" backgroundColor="rgba(39,135,255,0.1)" percent="50" stroke-width="6" />
+    <text style="color:#107AFF;font-size:40rpx;margin:30rpx 0;">注册</text>
+    <view class='loginItem'>
+      <label class="label">手机号码</label>
+      <input bindinput="phoneInput" maxlength="11" type="number" style="color:rgba(15,122,255,0.7);padding-left:16rpx;" />
+      <view class="divLine"></view>
+    </view>
+    <view class='loginItem'>
+      <view style="display:flex;justify-content:space-between;align-items: center;">
+        <label class="label">验证码</label>
+        <input bindinput="codeInput" maxlength="4" style="color:rgba(15,122,255,0.7);padding-left:16rpx;width:20%;" />
+        <button class="codeBtn" size="mini" style="margin:0;" bindtap="getCode" style="color:{{sendColor}};" disabled="{{smsFlag}}">{{sendTime}}</button>
+      </view>
+      <view class="divLine"></view>
+    </view>
+    <button class="nextStep" bindtap="nextStep" data-index="1">下一步</button>
+  </view>
+  <view wx:if="{{step == 2}}" style="width:80%;margin:0 auto;">
+    <progress class="progress" activeColor="#2787FF" backgroundColor="rgba(39,135,255,0.1)" percent="100" stroke-width="6" />
+    <text style="color:#107AFF;font-size:40rpx;margin:30rpx 0;">填写个人信息</text>
+    <view class='loginItem'>
+      <label class="label">姓名</label>
+      <input bindinput="userName" style="color:rgba(15,122,255,0.7);padding-left:16rpx;" />
+      <view class="divLine"></view>
+    </view>
+    <view class='loginItem'>
+      <label class="label">登录名</label>
+      <input bindinput="title" style="color:rgba(15,122,255,0.7);padding-left:16rpx;" />
+      <view class="divLine"></view>
+    </view>
+    <view class='loginItem'>
+      <label class="label">密码</label>
+      <input bindinput="pwd" password="true" style="color:rgba(15,122,255,0.7);padding-left:16rpx;" />
+      <view class="divLine"></view>
+    </view>
+    <view class='loginItem'>
+      <label class="label">确认密码</label>
+      <input bindinput="confirm_pwd" password="true" style="color:rgba(15,122,255,0.7);padding-left:16rpx;" />
+      <view class="divLine"></view>
+    </view>
+    <button class="nextStep" bindtap="nextStep" data-index="2">下一步</button>
+  </view>
+  <view wx:if="{{step == 3}}" style="width:80%;margin:0 auto;">
+    <progress class="progress" activeColor="#2787FF" backgroundColor="rgba(39,135,255,0.1)" percent="100" stroke-width="6" />
+    <text style="color:#107AFF;font-size:40rpx;margin:30rpx 0;text-align:center;width:100%;display:inline-block;">恭喜您，注册成功！</text>
+    <image mode="widthFix" style="width:100%;" src="../../image/login_was_ws_image.png"></image>
+    <text style="text-align:center;color:#2787FF;width:100%;display: inline-block;margin-top:45rpx;font-size:40rpx;">还差一步<text style="font-size:30rpx;padding-left:10rpx;">就可使用平台功能</text></text>
+    <button class="nextStep" style="margin-top:50rpx" bindtap="nextStep" data-index="3">立即完善</button>
+  </view>
+  <view wx:if="{{step == 4}}" style="width:80%;margin:0 auto;">
+    <progress class="progress" activeColor="#2787FF" backgroundColor="rgba(39,135,255,0.1)" percent="100" stroke-width="6" />
+    <text style="color:#107AFF;font-size:40rpx;margin:30rpx 0;">完善公司信息</text>
+    <view class='loginItem'>
+      <label class="label" style="width:170rpx;">公司名称</label>
+      <input bindinput="companyName" maxlength="30" style="color:rgba(15,122,255,0.7);padding-left:16rpx;" />
+      <view class="divLine"></view>
+    </view>
+    <view class='loginItem'>
+      <view style="display:flex;justify-content: flex-start;align-items: center;">
+        <label class="label" style="width:170rpx;">公司类型</label>
+        <radio-group class="radio-group" bindchange="companyChange" style="padding-left:16rpx;">
+          <radio style="padding-right:10rpx;" color="#2787FF" class="radio" wx:for-items="{{companyType}}" wx:key="value" value="{{item.value}}" checked="{{item.checked}}">
+            <text style="color:#2787FF;">{{item.text}}</text>
+          </radio>
+        </radio-group>
+      </view>
+      <view class="divLine"></view>
+    </view>
+    <view class='loginItem'>
+      <label class="label" style="width:170rpx;">联 系 人</label>
+      <input bindinput="userName" value="{{userName}}" style="color:rgba(15,122,255,0.7);padding-left:16rpx;" />
+      <view class="divLine"></view>
+    </view>
+    <view class='loginItem'>
+      <label class="label" style="width:170rpx;">联系人电话</label>
+      <input bindinput="phoneInput" value="{{phone}}" style="color:rgba(15,122,255,0.7);padding-left:16rpx;" />
+      <view class="divLine"></view>
+    </view>
+    <button class="nextStep" bindtap="nextStep" data-index="4">下一步</button>
+  </view>
+  <view wx:if="{{step == 5}}" style="width:80%;margin:0 auto;">
+    <progress class="progress" activeColor="#2787FF" backgroundColor="rgba(39,135,255,0.1)" percent="100" stroke-width="6" />
+    <text style="color:#107AFF;font-size:40rpx;text-align:center;width:100%;display:inline-block;">恭喜您</text>
+    <text style="color:#107AFF;font-size:40rpx;margin:30rpx 0;text-align:center;width:100%;display:inline-block;">可以开始使用啦</text>
+    <image mode="widthFix" style="width:100%;" src="../../image/login_was_successful_image.png"></image>
+    <button class="nextStep" style="margin-top:100rpx" bindtap="nextStep" data-index="5">立即体验</button>
+  </view>
+  <view wx:if="{{step == 6}}" style="width:80%;height:100%;margin:0 auto;display: flex;flex-direction: column;justify-content:space-between;">
+    <view>
+      <progress class="progress" activeColor="#2787FF" backgroundColor="rgba(39,135,255,0.1)" percent="100" stroke-width="6" />
+      <text style="color:#107AFF;font-size:40rpx;margin:15rpx 0;">公司认领</text>
+      <view class='loginItem' style="margin-top:15rpx;">
+        <label class="label" style="width:200rpx;">社会信用代码</label>
+        <input bindinput="socialCreditCode" maxlength="30" style="color:rgba(15,122,255,0.7);padding-left:16rpx;width:50%;" />
+        <view class="divLine"></view>
+      </view>
+      <view style="display:flex;justify-content:flex-start;align-items: flex-start;margin-top:30rpx;">
+        <text style="width:200rpx;color:rgba(16,122,255,0.7);; width: 200rpx;line-height: 80rpx;text-align-last: justify;">上传营业执照</text>
+        <view style="margin-left:30rpx;width:50%;">
+          <button style="color:#fff;width:220rpx;border-radius:0;border:none;background:#2787FF;height:80rpx;line-height:80rpx;margin:0;" bindtap="chooseImage">点击上传</button>
+          <image wx:if="{{tempFilePaths}}" mode="scaleToFill" src="{{tempFilePaths}}" style="width:60px;height:60px;margin-top:30rpx;"></image>
+        </view>
+      </view>
+      <view style="display:flex;justify-content:flex-start;align-items: flex-start;margin-top:30rpx;">
+        <text style="width:200rpx;color:rgba(16,122,255,0.7);; width: 200rpx;line-height: 80rpx;text-align-last: justify;">上传舱容表</text>
+        <view style="margin-left:30rpx;width:50%;">
+          <button style="color:#fff;width:220rpx;border-radius:0;border:none;background:#2787FF;height:80rpx;line-height:80rpx;margin:0;" bindtap="upCabin">点击上传</button>
+          <view wx:if="{{filename.length==0}}" style="diaplay:block;color:rgba(39,135,255,0.7);font-size:16rpx;line-height:16rpx;margin-top:30rpx;">* 请上传该公司旗下任意一条船的电子版舱容表</view>
+          <view wx:if="{{filename}}" style="diaplay:block;color:rgba(39,135,255,0.7);font-size:16rpx;line-height:16rpx;margin-top:30rpx;" wx:for="{{filename}}">{{item}}{{index != filename.length - 1?'、':''}}</view>
+        </view>
+      </view>
+    </view>
+    <button class="nextStep" style="margin-bottom:45rpx;width:100%;" catchtap="nextStep" data-index="6">提交</button>
+  </view>
+  <view wx:if="{{step == 7}}" style="width:80%;margin:0 auto;">
+    <progress class="progress" activeColor="#2787FF" backgroundColor="rgba(39,135,255,0.1)" percent="100" stroke-width="6" />
+    <text style="color:#107AFF;font-size:40rpx;margin:30rpx 0;text-align:center;width:100%;display:inline-block;">审核将在一个工作日内完成请耐心等待！</text>
+    <image mode="widthFix" style="width:100%;" src="../../image/awaiting_audit_image.png"></image>
+    <button class="nextStep" style="margin-top:100rpx" bindtap="nextStep" data-index="7">退出登录</button>
+  </view>
+  <view wx:if="{{step == 8}}" style="width:80%;margin:0 auto;">
+    <progress class="progress" activeColor="#2787FF" backgroundColor="rgba(39,135,255,0.1)" percent="100" stroke-width="6" />
+    <text style="color:#107AFF;font-size:40rpx;margin:30rpx 0;text-align:center;width:100%;display:inline-block;">公司认领失败</text>
+
+    <text style="color:#107AFF;font-size:40rpx;margin:30rpx 0;text-align:center;width:100%;display:inline-block;">{{failure}}</text>
+    <image mode="widthFix" style="width:100%;" src="../../image/company_claim_failed_image.png"></image>
+    <button class="nextStep" style="margin-top:100rpx" catchtap="nextStep" data-index="8">更改完善公司信息</button>
+  </view>
+  <view wx:if="{{step == 9}}" style="width:80%;margin:0 auto;">
+    <progress class="progress" activeColor="#2787FF" backgroundColor="rgba(39,135,255,0.1)" percent="100" stroke-width="6" />
+    <text style="color:#107AFF;font-size:40rpx;margin:30rpx 0;text-align:center;width:100%;display:inline-block;">公司认领成功</text>
+
+    <text style="color:#107AFF;font-size:40rpx;margin-bottom:45rpx;text-align:center;width:100%;display:inline-block;">您已成为{{firm_name}}公司管理员</text>
+    <image mode="widthFix" style="width:100%;" src="../../image/company_claim_successful_image.png"></image>
+    <button class="nextStep" style="margin-top:100rpx" catchtap="nextStep" data-index="9">立即体验</button>
+  </view>
+</view>
+<view wx:if="{{showModel}}" class="showModel" style="z-index:1000;">
+  <text style="padding:10% 10%;">{{need_claimed != 0?'系统中已存在'+companyName+'信息，您可以选择 “公司认领”成为该公司管理员，或选择“重新填写”添加一个新的公司':companyName+'已被人注册并认领，目前无法再次认领，您可以联系该公司联系人'+admin+'，或者联系平台客服解决。'}}</text>
+  <view style="display:flex;justify-content: flex-start;align-items: center;margin-bottom:10%;padding:0 5%;">
+    <button wx:if="{{need_claimed!=0}}" style="background:#2787FF;width:40%;color:#fff;" bindtap="companyClaim">公司认领</button>
+    <button style="background:#D6D6D6;width:40%;color:#1E2F46;" catchtap="again">重新填写</button>
+  </view>
+</view>
+
+<view wx:if="{{showModel}}" style="width:100%;height:100%;background:rgba(0,0,0,0.5);position:absolute;top:0;z-index:999;"></view>

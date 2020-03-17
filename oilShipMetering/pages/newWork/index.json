@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "shipList": "../../component/shipListCom/ship"
+  },
+  "navigationBarBackgroundColor": "#4099FD",
+  "navigationBarTitleText": "新建作业",
+  "navigationBarTextStyle": "white"
+}

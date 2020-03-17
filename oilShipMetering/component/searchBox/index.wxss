@@ -1,0 +1,100 @@
+@import "../../css/icon.wxss";
+
+/*搜索 开始*/
+
+.wrapper {
+  width: 100%;
+}
+
+.tit_seabox {
+  width: calc(100% - 64rpx);
+  background: #fff;
+  height: 100rpx;
+  /* padding: 0rpx 32rpx; */
+  padding-left: 32rpx;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 5px;
+  
+  justify-content: space-between;
+  box-shadow: 0px 0px 13px 0px rgba(27, 27, 27, 0.08);
+}
+
+.tit_seabox_bar {
+  width: calc(65% - 32rpx);
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 30rpx;
+  background: #fff;
+  /* padding-left: 32rpx; *//* box-shadow: #c7c7c7 0px 0px 10rpx; */
+}
+
+.picker {
+  display: flex;
+  flex-direction: row;
+  color: #838383;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.picker text{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  padding-right: 20rpx;
+}
+
+.picker label{
+  padding-right: 15rpx;
+}
+
+/*有权限添加活动*/
+
+.tit_seabox_bar.tit_seabox_add {
+  width: calc(100% - 122rpx);
+}
+
+/*开始搜索时*/
+
+/* .tit_seabox_bar.tit_start_search {
+  width: calc(100% - 102rpx);
+} */
+
+/*开始搜索且有权限添加*/
+
+.tit_seabox_bar.tit_start_search.tit_seabox_add {
+  width: calc(100% - 192rpx);
+}
+
+.tit_seabox_bar icon {
+  margin-right: 20rpx;
+}
+
+.tit_seabox input {
+  height: 60rpx;
+  line-height: 60rpx;
+  /* font-size: 28rpx; */
+  width: 100%;
+  margin-right: 32rpx;
+}
+
+.activity_add {
+  width: 60rpx;
+  text-align: right;
+  border-left: 4rpx solid #f2f2f2;
+  margin-left: 20rpx;
+}
+
+.activity_add image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.activity_seabtn {
+  font-size: 28rpx;
+  width: 70rpx;
+  text-align: right;
+}
+
+/*搜索 结束*/

@@ -1,0 +1,123 @@
+/* pages/evenCorrection/index.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+}
+
+form {
+  display: block;
+  /* width: 100%;
+  height: 100%; */
+}
+
+.textKg {
+  width: 90%;
+  margin: 0 auto;
+  /* text-align: center; */
+  padding-top: 15rpx;
+}
+
+.textFz {
+  float: right;
+  color: #50a4fc;
+}
+
+.sub {
+  width: 60%;
+  height: 80rpx;
+  margin: 30rpx auto;
+  background: #4099fd;
+  color: #fff;
+  line-height: 80rpx;
+}
+
+.subText {
+  text-align: center;
+  margin: 0 auto;
+  color: #50a4fc;
+  display: block;
+  width: 60%;
+  margin-top: 30rpx;
+}
+
+.content {
+  width: 90%;
+  height: 480rpx;
+  margin: 15rpx auto;
+  padding-bottom: 30rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column1 {
+  width: 24%;
+  height: 33.33%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.column {
+  width: 36%;
+  height: 33.33%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.column .tit, .column1 .tit {
+  width: 100%;
+  height: 40%;
+  background: #50a4fc;
+  display: block;
+  /* border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx; */
+  text-align: center;
+  line-height: 28px;
+  font-size: 26rpx;
+  color: #fff;
+}
+
+.column .int, .column1 .int {
+  width: 100%;
+  height: 60%;
+  background: #d9ebfe;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.int text {
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.className {
+  width: 6rpx;
+  height: 48rpx;
+  background: #666;
+  border-radius: 6rpx;
+  animation: twinkling 1s infinite;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes twinkling {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

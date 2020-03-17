@@ -1,0 +1,3 @@
+<!--pages/pdf/index.wxml-->
+<text>pages/pdf/index.wxml</text>
+<web-view src="{{urlPdf}}"></web-view>

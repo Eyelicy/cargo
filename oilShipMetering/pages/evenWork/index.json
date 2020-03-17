@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "mp-dialog": "../component/dialog/dialog",
+    "v-panel": "../../component/keyBoard/index"
+  },
+  "navigationBarBackgroundColor": "#4099FD",
+  "navigationBarTitleText": "作业录入",
+  "navigationBarTextStyle": "white"
+}

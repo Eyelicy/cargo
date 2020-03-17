@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "v-panel": "../../component/keyBoard/index"
+  },
+  "navigationBarBackgroundColor": "#4099FD",
+  "navigationBarTitleText": "录入水尺",
+  "navigationBarTextStyle": "white"
+}

@@ -1,0 +1,181 @@
+/* pages/search/index.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.searchBar {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45rpx;
+}
+
+.filter {
+  color: #4099fd;
+}
+
+.condition {
+  width: 94%;
+  margin: 30rpx auto;
+  color: #838383;
+  background: #fff;
+  box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.08);
+  border-radius: 8rpx;
+  padding-bottom: 60rpx;
+}
+
+.title {
+  display: inline-block;
+  padding-left: 5%;
+  margin: 30rpx 0;
+}
+
+.conditionPicker {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.conditionCheckbox {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.checkbox{
+  margin-right: 40rpx;
+}
+
+checkbox .wx-checkbox-input {
+  border: none;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAB1UlEQVQ4T62Uz0vCYBjHe00p3SJKBHF26lI3o8gOYhB0qtgS8e6/EB2izhVB9C94F5FJ3TolHioMvNWlU04EsSimFv5Y30e2mDWNwsHLtvd5ns++z/d997IRiyuZTHocDoegadp0q9VyUordbm8wxp6bzaYSi8Uq38uYeQIAHu8Bm802BcgHRhXPNcrpdDocQG6MMTy/YKoAoGrUf4HS6bS73W4vI9CGmntRFIso0swfAphlMhk/VM1jfhTXbSQSqVJOF0RKID2ENhq1Wu0mHo+/W7VszCUSiXGO44KocaImR8oMUAhfd6mqmjUg5XJ5Ewp2MIKkEiOPNs+8Xu8FAQnG83wY8TpAOUbGImEF9IIkSU+UVCqVDnHb76PqyOfzHVBMluUZKArAs2uWSqUWQPVEo9FL8kRRFBF3eVBryJcEQciQZ6hfR36FweQ1UF8h705Xc4V7eBAIsSxUrer+LqKbSWptA609QtGDDqLldv0CqgPEUQ4UzUHRrBXoDfGJP4OG1tp/zIbabbQm95jdZ/mPkbxn1R6KT7Bi3VjP8uvO/9iQ2AZbMHEX8SUdmAfkFJBzyw2pg4bzixBsKD+t4cVQjhGzsfoC+OlcMh9sdA5hFK0Otk8yXVvufzrU2AAAAABJRU5ErkJggg==) no-repeat;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAACaElEQVQ4T6VUPUwUURCeebtEBa/TBjQm2KilZ6JcoYYGlPvBSrk9NNLYqwVoLWhi6G004O0Su9u7M54NUYvDAmy1UBODR6OVCp5h347f7nLmhOMSdIt9u/PmfW/mm/mGqcWTsWVAyM8ycYJYDoYuwstCUmVSjmvx883HuNmQcuSIEv2QiPuE6CsJzWP9GPjAsRevfqz7gLrgszFWyvK7xvk/QMk5Oat830UUdRF/orZqPF66xuvNF8UfSEdPlx5lVlOIbrevVKY8wi82LiIampWjhuG/ZuZPwjxYHOGVVik3bOk56WaRiogc0lqdenqZ34YRZWyvSqQOa69+vHylsxbYUnkvqVhdRxonkZ7GuihiTJdyXA72kzNrPYa56w3sH1zLTPCQvT5gkqoQqzE3y48iYH0Hy61topp0LeN26Od4V1EEcKoGOW3rGdjO136o7oCTlO1lFHGhXWo+yXDJMt2Qs73+Cvh6xrj9vQgtFXPGxeBw2vZegvDT7YCE+FXRUmdC/7x+wkxxzji6Dg6mi1kjTAXAq1g62wFhbw3pdYVAjp5koRutgL5hP7ZzoP9OzUNqHGeQOwtOzu2IbJYLpaxZCMmOSQ0NXGkqv6D8ZlR+R09BHuPbpHcP/IR7f5U/InhrQ8IphWreRLQnAh+UeBHVuY/LSsH/loYMgfK/jgmbC/8kEQMSubQhkQBsGKIV7Reh8J8YHeOfvxv5VqI9ENM5dPNdhLiHDZUuNIu2wUU0RgQtL30Q7xcIcx7pRWOEqRe2ftj24w9jhFuPkWZig8EGnVo4ncDN0WBjWsZ3VXzfKY52VDYX4jdw4EokhALgQAAAAABJRU5ErkJggg==) no-repeat;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  color: transparent;
+  background-color: transparent;
+}
+
+.pickerData {
+  /* width: 45%; */
+  background: #f4f4f4;
+  border-radius: 30rpx;
+}
+
+.pickerData .picker {
+  padding: 10rpx 40rpx;
+}
+
+.line {
+  width: 10%;
+  height: 4rpx;
+  background: #ababab;
+  border-radius: 2rpx;
+}
+
+.btnConfirm{
+  width: 50%;
+  margin: 0 auto;
+  background: #50A4FD;
+  border: none;
+  color: #fff;
+  border-radius: 45rpx;
+  margin-top: 45rpx;
+}
+
+.task {
+  width: 94%;
+  height: 480rpx;
+  margin: 30rpx auto;
+  background: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0px 0px 13px 0px rgba(27, 27, 27, 0.08);
+}
+
+.ship {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 30rpx;
+}
+
+.ship:nth-child(1) {
+  padding-top: 60rpx;
+}
+
+.ship label {
+  width: 20%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-right: 5%;
+  text-align: justify;
+  color: #4297fa;
+  font-weight: 400;
+}
+
+.ship label::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.ship input {
+  width: 65%;
+  height: 80rpx;
+  border-radius: 16rpx;
+  background: rgba(62, 155, 253, 0.1);
+  padding-left: 20rpx;
+}
+
+.shipOperation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30rpx;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.shipOperation .shipBtn {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.shipBtn text {
+  font-weight: 500;
+  color: #4297fa;
+  line-height: 50rpx;
+}
+
+.shipBtn image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.load{
+  font-size: 28rpx;
+  color: #999;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+  z-index: -1;
+}

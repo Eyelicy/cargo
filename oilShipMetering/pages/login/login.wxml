@@ -1,0 +1,35 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+  <view class='content'>
+    <view class='login'>
+      <image class='titImg' src='../../image/logo_icon.png'></image>
+      <text class='titText'>舱容计量</text>
+      <view class='loginItem itemTop'>
+        <label class='iconfont icon-icontouxiang'></label>
+        <input bindinput="userName" maxlength="30" placeholder="请输入账号" />
+        <view class="divLine"></view>
+      </view>
+      <view class='loginItem'>
+        <label class='iconfont icon-mima'></label>
+        <input bindinput="userPwd" password maxlength="30" placeholder="请输入密码" />
+        <view class="divLine"></view>
+      </view>
+      <button class='btnLogin' catchtap="btnLogin">登录</button>
+      <text class="btnCs" bindtap="showMask">没有账号？去注册</text>
+    </view>
+    <view class='login1'></view>
+    <view class='login2'></view>
+  </view>
+  <!-- <view catchtouchmove="preventTouchMove" class="alert-mask" wx:if="{{showModal}}"></view>
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <image style="width:100%;height:100%;" src="../../image/tanke_advertising.png" bindtap="showImg">
+    </image>
+    <button bindtap="showImg" class="btnImg">长按保存至相册</button>
+  </view>
+  <view wx:if="{{showModal}}" bindtap="hideMask" style="opacity:1;z-index: 9999;margin-top:50%;">
+    <image class="btnClose" src="../../image/close_btn.png "></image>
+  </view> -->
+
+
+  <text class='titTxt'>携众计量检验平台 携众科技©2019</text>
+</view>

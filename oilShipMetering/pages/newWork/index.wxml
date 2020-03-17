@@ -1,0 +1,17 @@
+<!--pages/newWork/index.wxml-->
+<shipList wx:if="{{shipNameChange}}" ship="{{shipNewList1}}" styles='max-height:100%;' bindcitytap='cityTap'></shipList>
+<view wx:if="{{!shipNameChange}}" class='newWork'>
+  <form bindsubmit="formSubmit">
+    <view class='ship'>
+      <label>船 名</label>
+      <input style="justify-self: left;" focus="{{itemName.focus}}" disabled name="shipname" placeholder='请选择船名' value="{{shipname}}" bindtap="showShipList">
+      <text style="text-align: left;color:#A1A1A1;padding-right:20rpx;" wx:for="{{array}}" wx:if="{{array[index].shipname==shipname}}">({{array[index].accuracy_title}})</text>
+      </input>
+    </view>
+    <view class='ship' wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName">
+      <label>{{itemName.title}}</label>
+      <input bindconfirm="next" data-index="{{idx}}" focus="{{itemName.focus}}" name="{{itemName.name}}" placeholder='请输入{{itemName.title}}' type="text" confirm-type="next"></input>
+    </view>
+    <button class='next' form-type="submit">下一步</button>
+  </form>
+</view>

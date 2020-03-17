@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "9907de6e-a21a-4e72-8657-54bb1dcfc164",
+		"name": "tally",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createdamagecert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uid",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "berth",
+							"value": "fas444",
+							"type": "text"
+						},
+						{
+							"key": "ship_name",
+							"value": "远航号1147",
+							"type": "text"
+						},
+						{
+							"key": "voyage",
+							"value": "cctv11111",
+							"type": "text"
+						},
+						{
+							"key": "nationality",
+							"value": "china",
+							"type": "text"
+						},
+						{
+							"key": "commenced_time",
+							"value": "2019-06-01",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "%7b%22over%22%3a%5b%7b%22ctn%22%3a%22aabbsce%22%2c%22sealno%22%3a%2212312312%22%7d%2c%7b%22ctn%22%3a%22afasdddcdaa%22%2c%22sealno%22%3a%225634534536%22%7d%2c%7b%22ctn%22%3a%22aafasdce%22%2c%22sealno%22%3a%225467735%22%7d%5d%2c%22short%22%3a%5b%7b%22ctn%22%3a%22aabbsce%22%2c%22sealno%22%3a%2212312312%22%7d%2c%7b%22ctn%22%3a%22afasdddcdaa%22%2c%22sealno%22%3a%225634534536%22%7d%2c%7b%22ctn%22%3a%22aafasdce%22%2c%22sealno%22%3a%225467735%22%7d%5d%2c%22damage%22%3a%5b%7b%22ctn%22%3a%22aabbsce%22%2c%22sealno%22%3a%2212312312%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22afasdddcdaa%22%2c%22sealno%22%3a%225634534536%22%2c%22condition%22%3a%22%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e5%a4%a7%e6%b2%99%e5%8f%91%e4%b8%8aas%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4asas%e5%a4%a7%e5%a3%b0%e9%81%93%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22aafasdce%22%2c%22sealno%22%3a%225467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%2c%7b%22ctn%22%3a%22jkhghce%22%2c%22sealno%22%3a%229664467735%22%2c%22condition%22%3a%22%e7%94%b1%e4%ba%8e%e8%88%b9%e8%88%b1%e9%a2%a0%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e7%b0%b8%e4%b8%a5%e9%87%8d%ef%bc%8c%e6%89%80%e4%bb%a5%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89asdas%e7%9a%84asd%e5%b7%b4%e6%8b%89%e5%8f%91%e7%94%9f%e5%a4%a7%e6%97%b6%e4%bb%a3asdasdasd%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e5%b7%b4%e6%8b%89%e6%8b%89%e6%8b%89%e5%b7%b4%e6%af%94%e4%bc%a6%22%7d%5d%2c%22remark%22%3a%22%e9%82%a3%e6%8a%8a%e9%98%bf%e6%96%af%e8%be%be%e5%9b%9b%e5%a4%a7%e6%89%80%e5%a4%a7%e4%ba%ba%e5%b7%b4%e5%b0%94%e5%b7%b4%e4%ba%ba%e6%8a%8a%e4%ba%8c%e5%85%ab%e4%ba%94%e4%ba%8c%e5%85%ab%e4%ba%94%e4%ba%8c%e5%85%ab%e4%ba%8c%e5%85%ab%e4%ba%8c%e7%8f%ad%22%7d",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://www.tally.cn/app.php?s=/certificate/createDamageCert",
+					"protocol": "http",
+					"host": [
+						"www",
+						"tally",
+						"cn"
+					],
+					"path": [
+						"app.php"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "/certificate/createDamageCert"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchDamageCert",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.tally.cn/app.php?s=/certificate/searchDamageCert",
+					"protocol": "http",
+					"host": [
+						"www",
+						"tally",
+						"cn"
+					],
+					"path": [
+						"app.php"
+					],
+					"query": [
+						{
+							"key": "berth",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "ship_name",
+							"value": "远航号",
+							"disabled": true
+						},
+						{
+							"key": "voyage",
+							"value": "cctv",
+							"disabled": true
+						},
+						{
+							"key": "nationality",
+							"value": "m",
+							"disabled": true
+						},
+						{
+							"key": "commenced_start_time",
+							"value": "2019-05-01",
+							"disabled": true
+						},
+						{
+							"key": "commenced_end_time",
+							"value": "2019-06-10",
+							"disabled": true
+						},
+						{
+							"key": "list_start_time",
+							"value": "2019-06-09",
+							"disabled": true
+						},
+						{
+							"key": "list_end_time",
+							"value": "2019-06-11",
+							"disabled": true
+						},
+						{
+							"key": "s",
+							"value": "/certificate/searchDamageCert"
+						},
+						{
+							"key": "cert_id",
+							"value": "31",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updamagesign",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sign_picture",
+							"value": "data:image/jpeg;base64,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",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://www.tally.cn/app.php?s=/certificate/upDamageSignPicture&cert_id=33",
+					"protocol": "http",
+					"host": [
+						"www",
+						"tally",
+						"cn"
+					],
+					"path": [
+						"app.php"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "/certificate/upDamageSignPicture"
+						},
+						{
+							"key": "cert_id",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "接单",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uid",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "ctn_id",
+							"value": "9571",
+							"type": "text"
+						},
+						{
+							"key": "instruction_id",
+							"value": "1519",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://121.41.22.2/tally2main/app.php?c=QbzxOperation&a=ordertaking",
+					"protocol": "http",
+					"host": [
+						"121",
+						"41",
+						"22",
+						"2"
+					],
+					"path": [
+						"tally2main",
+						"app.php"
+					],
+					"query": [
+						{
+							"key": "c",
+							"value": "QbzxOperation"
+						},
+						{
+							"key": "a",
+							"value": "ordertaking"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "测试上传二进制图片",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://www.tally.cn/app.php?s=/certificate/upSignPictureTest",
+					"protocol": "http",
+					"host": [
+						"www",
+						"tally",
+						"cn"
+					],
+					"path": [
+						"app.php"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "/certificate/upSignPictureTest"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "打印单证",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.tally.cn/app.php?s=/certificate/printCert&cert_id=33",
+					"protocol": "http",
+					"host": [
+						"www",
+						"tally",
+						"cn"
+					],
+					"path": [
+						"app.php"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "/certificate/printCert"
+						},
+						{
+							"key": "cert_id",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "打印危险品单证",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.tally.cn/app.php?s=/certificate/printDamageCert&cert_id=33",
+					"protocol": "http",
+					"host": [
+						"www",
+						"tally",
+						"cn"
+					],
+					"path": [
+						"app.php"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "/certificate/printDamageCert"
+						},
+						{
+							"key": "cert_id",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

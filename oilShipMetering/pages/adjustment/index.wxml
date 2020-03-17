@@ -1,0 +1,74 @@
+<!--pages/adjustment/index.wxml-->
+<view class="container">
+  <view class='work'>
+    <radio-group name="solt" class="radio-group" bindchange="soltChange">
+      <label class="radio" wx:for="{{workList}}">
+        <radio color="#52A3FD" value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <picker class="reasonGroup" bindchange="bindPickerChange" value="{{index}}" range="{{reasons}}">
+      <view class="picker">
+       <label>调整原因：</label><text>{{reasons[index]}}</text>
+      </view>
+    </picker>
+  <view class="content-weight">
+    <view class="weight">
+      <text>首检重量</text>
+      <text>{{qiantotal==null?'--':qiantotal}}</text>
+    </view>
+    <view class="weight">
+      <text>货物重量</text>
+      <text>{{total==null?'--':total}}</text>
+    </view>
+    <view class="weight">
+      <text>末检重量</text>
+      <text>{{houtotal==null?'--':houtotal}}</text>
+    </view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="content" wx:if="{{solt==1?cabinQ.length>0:cabinH.length>0}}">
+      <view class="content-nav">
+        <view class="title">舱名</view>
+        <view class="diline"></view>
+        <view class="title">空高</view>
+        <view class="diline"></view>
+        <view class="title">温度</view>
+        <view class="diline"></view>
+        <view class="title">体积</view>
+      </view>
+      <view class="content-inp" wx:for="{{solt==1?cabinQ:solt==2?cabinH:''}}">
+        <view class="title">{{item.cabinname}}</view>
+        <view class="diline"></view>
+        <input type="number" name="data[{{index}}][ullage]" class="title inp" value="{{item.ullage}}"></input>
+        <view class="diline"></view>
+        <input name="data[{{index}}][temperature]" class="title inp" value="{{item.temperature}}"></input>
+        <view class="diline"></view>
+        <text class="title inp">{{item.cargo_weight == null?'--':item.cargo_weight}}</text>
+      </view>
+    </view>
+    <view class="content" wx:if="{{solt==2&&noWork.length}}">
+      <text style="text-align:center;margin:30rpx 0;">不作业船舱</text>
+      <view class="content-nav">
+        <view class="title">舱名</view>
+        <view class="diline"></view>
+        <view class="title">空高</view>
+        <view class="diline"></view>
+        <view class="title">温度</view>
+        <view class="diline"></view>
+        <view class="title">体积</view>
+      </view>
+      <view class="content-inp" wx:for="{{noWork}}">
+        <view class="title">{{item.cabinname}}</view>
+        <view class="diline"></view>
+        <input class="title inp" value="{{item.ullage}}"></input>
+        <view class="diline"></view>
+        <input class="title inp" value="{{item.temperature}}"></input>
+        <view class="diline"></view>
+        <text class="title inp">{{item.cargo_weight == null?'--':item.cargo_weight}}</text>
+      </view>
+    </view>
+    
+    <button class="next" form-type="submit">下一步</button>
+  </form>
+</view>

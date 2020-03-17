@@ -1,0 +1,47 @@
+<!--pages/gauge/index.wxml-->
+<form catchtap="hideKeyboard" bindsubmit="formSubmit" style="{{isShow?'padding-bottom:500rpx;':''}}">
+  <view class='work'>
+    <radio-group name="solt" class="radio-group" bindchange="soltChange">
+      <label class="radio" wx:for="{{workList}}">
+        <radio color="#52A3FD" value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <view class='draft'>
+    <view class='ship'>
+      <label>艏 吃 水</label>
+      <view data-type="forntleft" catchtap="focus" style="width:45%;">
+        <input style="{{forntleft==true?'background:#badafa':''}}" disabled="true" focus="{{forntleft}}" name="forntleft" bindtap="inputDisabled" type="digit" placeholder='请输入艏吃水' value="{{solt==1?list.q.forntleft:list.h.forntleft}}"></input>
+      </view>
+    </view>
+    <view class='ship'>
+      <label>艉 吃 水</label>
+      <view data-type="afterleft" catchtap="focus" style="width:45%">
+        <input style="{{afterleft==true?'background:#badafa':''}}" disabled="true" focus="{{afterleft}}" name="afterleft" bindtap="inputDisabled" type="digit" placeholder='请输入艉吃水' value="{{solt==1?list.q.afterleft:list.h.afterleft}}"></input>
+      </view>
+    </view>
+  </view>
+  <view class='draft'>
+    <view class='ship'>
+      <label>货物密度</label>
+      <view data-type="{{solt==1?'qiandensity':'houdensity'}}" catchtap="focus" style="width:45%">
+        <input style="{{density==true?'background:#badafa':''}}" disabled="true" focus="{{density}}" name="density" bindtap="inputDisabled" type="digit" placeholder='请输入货物密度' value="{{solt==1?list.q.qiandensity:list.h.houdensity}}"></input>
+      </view>
+    </view>
+    <view class='ship'>
+      <label>标准温度</label>
+      <picker disabled="{{radioChange}}" bindtap="inputDisabled" name="temperature" bindchange="bindPickerChange" value="{{temperature[index]}}" range="{{temperature}}" placeholder='请选择标准温度'>
+        <view class="picker">
+          <text>{{temperature[index]}}</text>
+          <label class='iconfont icon-drop_down_btn'></label>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="btnGroup">
+    <button class='next' form-type="submit" data-id="odd">单舱录入</button>
+    <button class='next' style="background:#FF9227" form-type="submit" data-id="even">批量录入</button>
+  </view>
+</form>
+
+<v-panel is-show="{{isShow}}" copy="{{copy}}" data-index="{{type}}" bindok="inputOk" binddelete="inputdelete" bindinputchange="inputChange" key-board-type="{{keyBoardType}}" backgroundColor="white" />
