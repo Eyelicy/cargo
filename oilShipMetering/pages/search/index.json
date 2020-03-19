@@ -1,8 +1,0 @@
-{
-  "navigationBarBackgroundColor": "#4099FD",
-  "navigationBarTitleText": "搜索作业",
-  "navigationBarTextStyle": "white",
-  "usingComponents": {
-    "SearchBar": "/component/searchBox/index"
-  }
-}

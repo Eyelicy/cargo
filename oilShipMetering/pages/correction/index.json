@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "v-panel": "../../component/keyBoard/index"
-  },
-  "navigationBarBackgroundColor": "#4099FD",
-  "navigationBarTitleText": "纵倾修正录入",
-  "navigationBarTextStyle": "white"
-}

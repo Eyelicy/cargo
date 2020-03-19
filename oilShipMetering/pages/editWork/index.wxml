@@ -1,9 +1,0 @@
-<!--pages/editWork/index.wxml-->
-<form bindsubmit="formSubmit">
-  <view class='ship' wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName">
-    <label>{{itemName.title}}</label>
-    <input bindconfirm="next" disabled="{{itemName.name=='shipname'||itemName.name=='voyage'?true:false}}" data-index="{{idx}}" focus="{{itemName.focus}}" name="{{itemName.name}}" placeholder='请输入{{itemName.title}}' value="{{itemName.value}}" type="{{itemName.name=='transport'?'digit':'text'}}"
-      confirm-type="next"></input>
-  </view>
-  <button class='next' form-type="submit">修改</button>
-</form>
